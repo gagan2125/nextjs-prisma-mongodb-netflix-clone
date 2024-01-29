@@ -1,8 +1,6 @@
 import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 
-import React from 'react'
-
 const useBillBoard = () => {
   const {data, error, isLoading} = useSWR('/api/random', fetcher, {
     revalidateIfStale:false,
@@ -16,4 +14,4 @@ const useBillBoard = () => {
   }
 }
 
-export default useBillBoard
+export default useBillBoard;
